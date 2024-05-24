@@ -5,7 +5,6 @@ import { CreatePostService } from "../services/createPost.service";
 
 export const CreatePostController = TryCatch(
 	async (req: Request, res: Response) => {
-		console.log(req.body);
 		const result = await CreatePostService(req.body);
 
 		SendSuccessResponse(res, {
